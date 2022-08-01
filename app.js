@@ -31,14 +31,14 @@ function initEvents() {
 showPage(activePage);
 initEvents();
 
-function displaySkills() {
+function displaySkills(skills) {
   var ul = document.querySelector('#skills ul');
 
-  var skills = [
-    { name: 'html', endorcements: 10, favorite: true },
-    { name: 'css', endorcements: 20, favorite: false },
-    { name: 'js', endorcements: 15, favorite: true },
-  ];
+  // var skills = [
+  //   { name: 'html', endorcements: 10, favorite: true },
+  //   { name: 'css', endorcements: 20, favorite: false },
+  //   { name: 'js', endorcements: 15, favorite: true },
+  // ];
   skills.sort(function (a, b) {
     return b.endorcements - a.endorcements;
     // if (a.name.toLowerCase() < b.name.toLowerCase()) {
@@ -55,4 +55,19 @@ function displaySkills() {
     ul.innerHTML += `<li>${skills[i].name} - ${skills[i].endorcements}</li>`;
   }
 }
-displaySkills();
+// displaySkills();
+
+function loadSkills() {
+  //  console.time('load')
+  fetch('skills.json')
+    .then(function (response) {
+      // console.log(response.json());
+      return response.json();
+    })
+    .then(function (serverSkills) {
+      // console.warn('am primit ceva', skills);
+      displaySkills(serverSkills);
+      // console.timeEnd('load')
+    });
+}
+loadSkills();

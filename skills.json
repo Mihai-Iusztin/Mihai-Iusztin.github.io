@@ -1,0 +1,5 @@
+[
+    { "name": "html", "endorcements": 11, "favorite": true },
+    { "name": "css", "endorcements": 25, "favorite": false },
+    { "name": "js", "endorcements": 16, "favorite": true }
+  ]
