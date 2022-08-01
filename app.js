@@ -32,13 +32,16 @@ showPage(activePage);
 initEvents();
 
 function displaySkills() {
-  console.info('Display skills');
-
   var ul = document.querySelector('#skills ul');
-  console.log(ul);
-  var skills = ['html', 'css', 'js'];
+
+  var skills = [
+    { name: 'html', endorcements: 10 },
+    { name: 'css', endorcements: 20 },
+    { name: 'js', endorcements: 15 },
+  ];
+
   for (var i = 0; i < skills.length; i++) {
-    ul.innerHTML += `<li>${skills[i]}</li>`;
+    ul.innerHTML += `<li>${skills[i].name} - ${skills[i].endorcements}</li>`;
   }
 }
 displaySkills();
