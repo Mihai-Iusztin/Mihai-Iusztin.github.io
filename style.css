@@ -1,0 +1,140 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+
+#info {
+    background: rgb(23, 6, 90);
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: azure;
+    max-width: 40vh;
+  border-right: 1px solid yellow;
+  font-family: 'Courgette', cursive;
+}
+
+#main {
+    background: rgb(18, 3, 80);
+    flex: 6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#img {
+   flex: 1;
+  
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#img img {
+    width: 50%;
+    border-radius: 50%;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#contact-pers {
+    flex: 3;
+   
+    padding-left: 2rem;
+    padding-top: 4rem;
+}
+
+#contact-pers h3 {
+    padding: 0;
+    font-family: 'Courgette', cursive;
+    /* font-style: italic; */
+}
+
+#social {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+ #social img {
+    height: 3rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem; 
+ }
+ #web-page {
+    flex: 1;
+    margin: 0 0 0 3rem;
+    
+ }
+ #web-page a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: aqua;
+    
+ }
+
+ #top-menu-bar {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 4rem;
+    flex: 0.5;
+    background: rgb(18, 3, 80);
+  font-family: 'Rye', cursive;
+ }
+
+ #top-menu-bar li {
+    display: inline;
+    padding: 0 1rem 0 0 ;
+    
+ }
+#top-menu-bar a {
+    text-decoration: none;
+    padding: 0rem 2rem 0 2rem;
+    margin-top: 5rem;
+    color: azure;
+}
+#top-menu-bar a.active {
+    color: rgb(213, 233, 233);
+    text-decoration: underline;
+}
+
+#main-page {
+flex: 7;
+}
+
+.page {
+    display: none;
+    width: 90%;
+    height: 90%;
+    background: rgb(245, 245, 251);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 0.5rem rgb(79, 84, 152);
+}
+
+.visible {
+    display: block;
+    animation: fade_in_show 0.5s;
+}
+
+@keyframes fade_in_show {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+}
+}
