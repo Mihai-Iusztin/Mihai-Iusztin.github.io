@@ -5,7 +5,7 @@ function show(id) {
   document.getElementById(id).classList.add('visible');
 }
 
-let activePage = 'about';
+let activePage = 'skills';
 
 function showPage(nextPage) {
   hide(activePage);
@@ -30,3 +30,15 @@ function initEvents() {
 
 showPage(activePage);
 initEvents();
+
+function displaySkills() {
+  console.info('Display skills');
+
+  var ul = document.querySelector('#skills ul');
+  console.log(ul);
+  var skills = ['html', 'css', 'js'];
+  for (var i = 0; i < skills.length; i++) {
+    ul.innerHTML += `<li>${skills[i]}</li>`;
+  }
+}
+displaySkills();
