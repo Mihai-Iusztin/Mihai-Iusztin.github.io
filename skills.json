@@ -1,5 +1,12 @@
 [
-    { "name": "html", "endorcements": 11, "favorite": true },
-    { "name": "css", "endorcements": 25, "favorite": false },
-    { "name": "js", "endorcements": 16, "favorite": true }
-  ]
+  {
+    "name": "Programming languages",
+    "endorcements": "JavaScript, CSS, HTML",
+    "favorite": true
+  },
+  {
+    "name": "Foreign languages ",
+    "endorcements": "English-Professional working proficiency",
+    "favorite": false
+  }
+]

@@ -65,7 +65,7 @@ function loadSkills() {
       return response.json();
     })
     .then(function (serverSkills) {
-      // console.warn('am primit ceva', skills);
+      // console.warn('am primit ceva', serverSkills);
       displaySkills(serverSkills);
       // console.timeEnd('load')
     });
